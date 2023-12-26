@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gender-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><b><i>This is a sample heading</i></b></h1>
+
+    <form action="/action_page.php" method="get">
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" autofocus><br>
+            <label for="lastName">Last Name</label>
+            <input type="text"><br>
+
+            <label for="gender">Gender</label>
+            <div class="gender-group">
+                <label>
+                    <input type="radio" name="values" id="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="values" id="female"> Female
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button type="reset">Reset</button>
+            <button type="submit" onclick="alert('Submitted')">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
