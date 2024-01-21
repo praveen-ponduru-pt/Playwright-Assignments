@@ -12,8 +12,10 @@ function updateArray(array) {
             continue;
     }
     if (array.length != lengthOfArray) {
-        while (array.length != lengthOfArray)
+
+        while (array.length != lengthOfArray) {
             array.push(0);
+        }
     }
     return array;
 }

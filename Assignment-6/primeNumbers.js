@@ -19,7 +19,12 @@ function isPrime(number) {
 
 function primeNumbers(lowerLimit, upperLimit) {
 
-    for (let iter = lowerLimit; iter <= upperLimit; iter++) {
+    if (lowerLimit < 0 && upperLimit < 0) {
+        console.log("Please enter only positive values");
+        return -1;
+    }
+
+    for (let iter = lowerLimit < 2 ? 2 : lowerLimit; iter <= upperLimit; iter++) {
         if (isPrime(iter)) {
             console.log(iter);
         }

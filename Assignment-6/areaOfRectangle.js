@@ -5,5 +5,6 @@ function areaOfRectangle(length, width = 5) {
 }
 
 let length = parseInt(prompt("Enter lenght of Rectangle: "));
+let width = parseInt(prompt("Enter width of Rectangle: ")) || undefined;
 
-console.log(areaOfRectangle(length));
+console.log(areaOfRectangle(length, width));
