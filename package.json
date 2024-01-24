@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a repository for Playwright assignments",
   "main": "main.js",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
