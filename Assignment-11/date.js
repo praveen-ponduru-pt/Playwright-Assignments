@@ -1,3 +1,4 @@
+import moment from "moment";
 
 function differenceInDays(date1, date2) {
     const startDate = new Date(date1);
@@ -9,3 +10,14 @@ function differenceInDays(date1, date2) {
 }
 
 console.log(differenceInDays('10-13-2023', '12-03-2023'));
+
+//using moment
+
+// console.log(moment().dayOfYear());
+
+// function differenceUsingMoment(date1, date2) {
+
+//     return moment(date1).diff(moment(date2), 'days');
+
+// }
+
