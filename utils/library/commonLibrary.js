@@ -1,0 +1,10 @@
+class CommonLibrary {
+
+    loginToTheApplication() {
+
+    };
+
+    logoutFromTheApplication() {
+
+    };
+}
