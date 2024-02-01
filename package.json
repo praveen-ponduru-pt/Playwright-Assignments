@@ -1,0 +1,17 @@
+{
+  "name": "playwright-assignments",
+  "version": "1.0.0",
+  "description": "This is a Page Object Model Framework using Playwright for Session-16",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
+  }
+}
