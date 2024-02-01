@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('Add products to carts', async ({ page }) => {
+test('Add products to carts', async ({ page }) => {
 
   await page.goto('https://automationexercise.com/');
   await page.getByRole('link', { name: ' Products' }).click();
