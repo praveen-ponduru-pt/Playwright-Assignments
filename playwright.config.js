@@ -12,7 +12,7 @@ dotenv.config({
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './tests',
+  // testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -29,7 +29,7 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'retain-on-failure',
   },
 
   /* Configure projects for major browsers */
@@ -48,11 +48,11 @@ module.exports = defineConfig({
 
     {
       name: 'chromium',
-      testIgnore: './test-examples',
+      testDir: './tests',
+      dependencies: ['global setup'],
       use: {
-        ...devices['Desktop Chrome'],
-      },
-      dependencies: ['global setup']
+        ...devices['Desktop Chrome']
+      }
     },
 
     // {

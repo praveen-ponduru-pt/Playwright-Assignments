@@ -1,10 +1,27 @@
-class CommonLibrary {
+import { LoginPage } from "../pageObjects/loginPage";
+import { HomePage } from "../pageObjects/homePage";
 
-    loginToTheApplication() {
+const commonLibrary = {
 
-    };
+    navigateToTheApplication: async (page) => {
 
-    logoutFromTheApplication() {
+        await page.goto(process.env.APP_URL);
+    },
 
-    };
+    loginToTheApplication: async (page) => {
+
+        await commonLibrary.navigateToTheApplication(page);
+
+        const homePage = new HomePage(page);
+        await homePage.navigateToLoginPage(page);
+        const loginPage = new LoginPage(page);
+        loginPage.login(process.env.MYEMAIL, process.env.PASSWORD);
+
+    },
+
+    async logoutFromTheApplication() {
+
+    }
 }
+
+export { commonLibrary }

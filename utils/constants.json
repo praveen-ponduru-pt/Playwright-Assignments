@@ -1,3 +1,20 @@
 {
-    
+    "userInfo": {
+        "name": "Praveen Kumar",
+        "AddressInfo": {
+            "firstName": "Praveen",
+            "lastName": "Kumar",
+            "company": "PalTech",
+            "address": "Purva Summit, Whitefields, Kondapur",
+            "state": "Telangana",
+            "city": "Hyderabad",
+            "zipcode": "500082",
+            "mobileNumber": "9491808803"
+        }
+    },
+    "headers": {
+        "loginPage": "Login to your account",
+        "loggedInMessage": "Logged in as",
+        "deleteAccountMessage": "Account Deleted!"
+    }
 }
