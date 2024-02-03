@@ -6,7 +6,7 @@ class LoginPage {
         this.emailAddress = page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address');
         this.password = page.getByPlaceholder('Password');
         this.loginButton = page.getByRole('button', { name: 'Login' });
-        this.heading = page.locator('div.login-form>h2');
+        this.LoginHeading = page.getByRole('heading', { name: 'Login to your account' });
         this.loginError = page.locator("form>p[style='color: red;']");
     }
 

@@ -13,7 +13,7 @@ test('User Login with correct email and password', async ({ page }) => {
     await homePage.navigateToLoginPage(page);
 
     const loginPage = new LoginPage(page);
-    // await expect.soft(loginPage.heading).toHaveText(headers.loginPage);
+    await expect.soft(loginPage.LoginHeading).toBeVisible();
 
     await loginPage.login(process.env.MYEMAIL, process.env.PASSWORD);
     // await expect.soft(homePage.loggedInMessage.innerText()).toContainText(headers.loggedInMessage);
