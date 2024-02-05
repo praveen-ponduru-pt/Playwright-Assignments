@@ -14,7 +14,7 @@ dotenv.config({
 module.exports = defineConfig({
   // testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -36,34 +36,13 @@ module.exports = defineConfig({
   projects: [
 
     {
-      name: 'global setup',
-      testMatch: /global\.setup\.js/,
-      teardown: 'global teardown'
-    },
-
-    {
-      name: 'global teardown',
-      testMatch: /global\.teardown\.js/,
-    },
-
-    {
-      name: 'chromium',
+      name: 'Automation Exercise',
+      fullyParallel: false,
       testDir: './tests',
-      dependencies: ['global setup'],
       use: {
         ...devices['Desktop Chrome']
       }
-    },
-
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // }
+    }
   ]
 });
 

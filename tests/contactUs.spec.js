@@ -4,7 +4,7 @@ import { ContactUs } from '../utils/pageObjects/contactUs';
 import { HomePage } from '../utils/pageObjects/homePage';
 import { contactUsForm } from '../utils/constants.json';
 
-test.only("Submit Contact Us Form", async ({ page }) => {
+test("Submit Contact Us Form", async ({ page }) => {
 
     await commonLibrary.navigateToTheApplication(page);
     await expect.soft(page).toHaveTitle('Automation Exercise');
