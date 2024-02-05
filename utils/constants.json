@@ -23,5 +23,10 @@
         "subject": "Sample contact subject",
         "message": "Hi, This is a test email body",
         "filePath": "util\\files\\sample.pdf"
+    },
+    "reviewInfo": {
+        "name": "Praveen Kumar",
+        "emailID": "praveen.ponduru@test.com",
+        "review": "This product is good"
     }
 }

@@ -9,6 +9,7 @@ class HomePage {
         this.deleteSuccessMessage = page.locator('h2.title');
         this.logoutButton = page.getByRole('link', { name: ' Logout' });
         this.contactUsMenu = page.getByRole('link', { name: ' Contact us' });
+        this.productsMenu = page.getByRole('link', { name: ' Products' });
     }
 
     async navigateToLoginPage(page) {
@@ -18,6 +19,10 @@ class HomePage {
 
     async navigateToContactUsPage(page) {
         await this.contactUsMenu.click();
+    }
+
+    async navigateToProductsPage(page) {
+        await this.productsMenu.click();
     }
 
     async deleteAccount(page) {
