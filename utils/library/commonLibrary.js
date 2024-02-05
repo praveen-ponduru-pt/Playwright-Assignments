@@ -19,8 +19,10 @@ const commonLibrary = {
 
     },
 
-    async logoutFromTheApplication() {
+    async logoutFromTheApplication(page) {
 
+        const homePage = new HomePage(page);
+        await homePage.logoutButton.click();
     }
 }
 
