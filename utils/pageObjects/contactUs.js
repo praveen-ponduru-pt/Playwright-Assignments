@@ -10,8 +10,8 @@ class ContactUs {
         this.messageField = page.getByPlaceholder('Your Message Here');
         this.chooseFileButton = page.locator('input[name="upload_file"]');
         this.submitButton = page.getByRole('button', { name: 'Submit' });
-        this.successMessage = page.locator('#contact-page').getByText('Success! Your details have been submitted successfully')
-        this.homeButton = page.getByRole('link', { name: ' Home' })
+        this.successMessage = page.locator('#contact-page').getByText('Success! Your details have been submitted successfully');
+        this.homeButton = page.getByRole('link', { name: ' Home' });
     }
 
     async submitForm(contactFormInfo) {
