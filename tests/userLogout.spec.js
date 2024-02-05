@@ -4,7 +4,7 @@ import { HomePage } from '../utils/pageObjects/homePage';
 import { LoginPage } from '../utils/pageObjects/loginPage';
 import { headers } from '../utils/constants.json';
 
-test.only('User Logout', async ({ page }) => {
+test('User Logout', async ({ page }) => {
 
     await commonLibrary.navigateToTheApplication(page);
     await expect.soft(page).toHaveTitle('Automation Exercise');

@@ -16,5 +16,12 @@
         "loginPage": "Login to your account",
         "loggedInMessage": "Logged in as",
         "deleteAccountMessage": "Account Deleted!"
+    },
+    "contactUsForm": {
+        "name": "Praveen Kumar",
+        "emailID": "praveen.ponduru@test.com",
+        "subject": "Sample contact subject",
+        "message": "Hi, This is a test email body",
+        "filePath": "util\\files\\sample.pdf"
     }
 }
