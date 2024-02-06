@@ -8,7 +8,8 @@ test("Navigation to PIM module", async ({ page }) => {
     await page.locator("[name='password']").fill('admin123');
     await page.locator("[type='submit']").click();
 
-    page.getByRole('link', { name: 'PIM' })
+    await page.waitForLoadState();
+    await page.locator('a.oxd-main-menu-item').filter({ hasText: 'PIM' }).click();
 
-    await expect(page.locator("div.oxd-topbar-header-title > span > h6")).toHaveText('Dashboard');
+    await expect(page.locator("div.oxd-topbar-header-title > span > h6")).toHaveText('PIM');
 })
