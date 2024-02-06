@@ -31,39 +31,12 @@ export default defineConfig({
     headless: false
   },
 
-  /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
-    // },
-
     {
-      name: 'Login functionality',
-      // testMatch: 'Assignment-15/softAssertions.spec.js',
-      // testMatch: 'Assignment-15/login.spec.js',
-      testDir: './Assignment-15',
-      fullyParallel: true,
-      retries: 0,
-
-      use: {
-        ...devices['Desktop Chrome'],
-        trace: 'on',
-        headless: true,
-      }
+      name: 'chromium',
+      testDir: './Assignment-14',
+      use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'Navigation to Admin',
-      testMatch: 'Assignment-15/navigation.spec.jss',
-      fullyParallel: false,
-      retries: 2,
-
-      use: {
-        ...devices['Desktop Firefox'],
-        trace: 'on-first-retry',
-        headless: false,
-      }
-    }
   ]
 });

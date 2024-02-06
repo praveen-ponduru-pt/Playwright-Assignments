@@ -31,4 +31,6 @@ test('Register User', async ({ page }) => {
     await page.getByRole('link', { name: ' Delete Account' }).click();
     await expect(page.locator('b')).toContainText('Account Deleted!');
     await page.getByRole('link', { name: 'Continue' }).click();
+
+    await expect();
 });

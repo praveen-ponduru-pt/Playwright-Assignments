@@ -18,12 +18,12 @@ test("css and xpath selectors of textboxes", async ({ page }) => {
     email = page.locator("//input[@id='userEmail']");
     currentAddress = page.locator("//textarea[@id='currentAddress']");
     permanantAddress = page.locator("//textarea[@id='permanentAddress']");
-
-
 });
 
 //checkboxes
 test("css selectors of checkboxes", async ({ page }) => {
+
+
     await page.locator('label').filter({ hasText: 'Classified' }).getByRole('img').first().click();
     await page.locator('label').filter({ hasText: 'Veu' }).getByRole('img').first().click();
     await page.locator('label').filter({ hasText: 'Word File.doc' }).getByRole('img').first().click();
@@ -32,6 +32,7 @@ test("css selectors of checkboxes", async ({ page }) => {
 
 //radio buttons
 test("css selectors for radio buttons", async ({ page }) => {
+
     yesRadioButton = page.locator('input#yesRadio');
     impressiveRadioButton = page.locator('input#impressiveRadio');
     noRadioButton = page.locator('input#noRadio');
