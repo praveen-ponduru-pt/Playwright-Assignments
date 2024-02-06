@@ -4,10 +4,9 @@ class Products {
 
         this.page = page;
         this.product = page.locator('div:nth-child(6) > .product-image-wrapper > .choose > .nav > li > a');
-
     }
 
-    async navigateToProductDetailsPage(page) {
+    async navigateToProductDetailsPage() {
 
         await this.product.click();
     }

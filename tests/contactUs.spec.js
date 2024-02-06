@@ -10,16 +10,12 @@ test("Submit Contact Us Form", async ({ page }) => {
     await expect.soft(page).toHaveTitle('Automation Exercise');
 
     const homePage = new HomePage(page);
-    await homePage.navigateToContactUsPage(page);
+    await homePage.navigateToContactUsPage();
 
     const contactUsPage = new ContactUs(page);
     await expect.soft(contactUsPage.heading).toBeVisible();
 
-    await contactUsPage.submitForm(contactUsForm);
-
-    page.on('dialog', dialog => dialog.accept());
-    await contactUsPage.submitButton.click();
-
+    await contactUsPage.submitForm(page, contactUsForm);
     await expect.soft(contactUsPage.successMessage).toBeVisible();
 
     await contactUsPage.homeButton.click();

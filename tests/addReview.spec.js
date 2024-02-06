@@ -11,11 +11,11 @@ test("Add Review to a Product", async ({ page }) => {
     await expect.soft(page).toHaveTitle('Automation Exercise');
 
     const homePage = new HomePage(page);
-    await homePage.navigateToProductsPage(page);
+    await homePage.navigateToProductsPage();
     await expect.soft(page).toHaveTitle('Automation Exercise - All Products');
 
     const productsPage = new Products(page);
-    productsPage.navigateToProductDetailsPage(page);
+    await productsPage.navigateToProductDetailsPage();
 
     const productDetailsPage = new ProductDetails(page);
     await expect.soft(productDetailsPage.reviewHeader).toBeVisible();

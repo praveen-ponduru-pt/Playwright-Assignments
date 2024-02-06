@@ -3,7 +3,7 @@ class ProductDetails {
     constructor(page) {
 
         this.page = page;
-        this.reviewHeader = page.getByRole('link', { name: 'Write Your Review' });
+        this.reviewHeader = page.locator('div.col-sm-12>ul>li').filter({ hasText: 'Write Your Review' });
         this.nameField = page.getByPlaceholder('Your Name');
         this.emailField = page.getByPlaceholder('Email Address', { exact: true });
         this.reviewField = page.getByPlaceholder('Add Review Here!');

@@ -14,14 +14,15 @@ class ContactUs {
         this.homeButton = page.getByRole('link', { name: ' Home' });
     }
 
-    async submitForm(contactFormInfo) {
+    async submitForm(page, contactFormInfo) {
 
         await this.nameField.fill(contactFormInfo.name);
         await this.emailField.fill(contactFormInfo.emailID);
         await this.subjectField.fill(contactFormInfo.subject);
         await this.messageField.fill(contactFormInfo.message);
-
         await this.chooseFileButton.setInputFiles(contactFormInfo.filePath);
+
+        page.on('dialog', dialog => dialog.accept());
         await this.submitButton.click();
     }
 }
