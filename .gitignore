@@ -3,4 +3,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-.env
+/.env
+/bms.js
+/main.js
